@@ -76,18 +76,17 @@ class TravelState(TypedDict):
 # Flight Agent
 # =========================
 
-# def flight_agent(state: TravelState):
-#     query = state["user_query"]
-#     flight_data = search_flights(query)
+#def flight_agent(state: TravelState):
+#    query = state["user_query"]
+#   flight_data = search_flights(query)
 
-#     return {
-#         "flight_results": flight_data,
-#         "messages": [
-#             AIMessage(content="Flight results fetched.")
-#         ],
-#         "llm_calls": state.get("llm_calls", 0) + 1
-#     }
-
+#  return {
+#     "flight_results": flight_data,
+#    "messages": [
+#       AIMessage(content="Flight results fetched.")
+       #  ],
+        # "llm_calls": state.get("llm_calls", 0) + 1
+     #}
 
 
 
@@ -129,8 +128,8 @@ def flight_agent(state: TravelState):
     try:
 
         airports = asyncio.run(
-            aviation_mcp_call(
-                "list_airports"
+           aviation_mcp_call(
+               "list_airports"
             )
         )
 
